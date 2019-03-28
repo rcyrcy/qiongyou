@@ -1,7 +1,7 @@
 <template>
     <div>
         <city-header></city-header>
-        <city-search></city-search>
+        <city-search :cities="cities"></city-search>  <!-- 接收数据cities -->
         <city-list 
         :cities="cities" 
         :hot="hotCities"
