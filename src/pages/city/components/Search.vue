@@ -4,18 +4,33 @@
         <input v-model="keyword" class="search-input" type="text" placeholder="输入城市名或拼音">
         <!-- 与数据keyword进行双向绑定 -->
     </div>
-    <div class="search-content">
+    <div 
+        class="search-content" 
+        ref="search"
+        v-show="keyword"
+    >
         <ul>
-            <li>123</li>
+            <li 
+            class="search-item border-bottom"
+            v-for="item of list" 
+            :key="item.id"
+            >
+                {{item.name}}
+            </li>
+            <li class="search-item border-bottom" v-show="hasNoData">
+                没有找到匹配数据
+            </li>
+            <!-- v-show="!list.length" 如果长度为0时显示没有找到匹配数据 -->
         </ul>
     </div>
 </div>
 </template>
 
 <script>
+import Bscroll from 'better-scroll'
 export default {
     name:"CitySearch",
-    porps:{  //接收cities  类型为Object
+    props:{  //接收cities  类型为Object
         cities:Object
     },
     data () {
@@ -26,10 +41,19 @@ export default {
             timer:null  //定义timer 用于截流
         }
     },
+    computed:{
+        hasNoData(){
+            return !this.list.length
+        }
+    },
     watch:{  //监听器  监听keyword 的改变
         keyword () {
             if(this.timer){
                 clearTimeout(this.timer)
+            }
+            if(!this.keyword){  //如果输入框为空
+                this.list=[]
+                return
             }
             this.timer = setTimeout(()=>{
                 const result = []
@@ -44,7 +68,10 @@ export default {
                 this.list=result  //将result 给到list
             },100)
         }
-    }
+    },
+    mounted() {
+        this.scroll = new Bscroll(this.$refs.search)
+    },
 }
 </script>
 
@@ -70,6 +97,11 @@ export default {
     right 0
     bottom 0
     overflow hidden
-    background blue
     z-index 1
+    background #ccc
+    .search-item
+        line-height .62rem
+        padding-left .2rem
+        color #666
+        background #fff
 </style>
