@@ -40,8 +40,15 @@
 
 <script>
 import Bscroll from "better-scroll";
+import { mapState, mapMutations } from "vuex";
 export default {
   name: "CityList",
+  computed: {
+    // ...mapState(["city"])
+    // 也可以是对象
+    ...mapState({ currentCity: "city" })
+    // 将vuex里面的city这个功能的数据 映射到这个组件的计算属性里 映射后的名字叫currentCity
+  },
   props: {
     hot: Array,
     cities: Object,
@@ -52,10 +59,12 @@ export default {
       //当点击城市时action将得到派发 vuex内对应的action 将会得到city
       // this.$store.dispatch("changeCity", city);
       //因为跳过了actions 所以用commit 直接调用mutations
-      this.$store.commit("changeCity", city);
+      // this.$store.commit("changeCity", city);
+      this.changeCity(city);
       //当城市被点击后跳转
       this.$router.push("/");
-    }
+    },
+    ...mapMutations(["changeCity"])
   },
   mounted() {
     this.scroll = new Bscroll(this.$refs.wrapper);

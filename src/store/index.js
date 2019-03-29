@@ -15,4 +15,9 @@ export default new Vuex.Store({
     },
     * */
   mutations
+  // getters: {
+  //   doubleCity(state) {
+  //     return state.city + "" + state.city;
+  //   }
+  // }
 });
