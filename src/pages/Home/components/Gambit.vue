@@ -23,7 +23,11 @@
 export default {
   name: "HomeGambit",
   props: {
-    gambitList: Array
+    gambitList: Array,
+    outerRef: Object
+  },
+  updated() {
+    this.outerRef.refresh();
   }
 };
 </script>
