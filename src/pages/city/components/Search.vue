@@ -116,6 +116,7 @@ export default {
 
   .search-item {
     line-height: 0.62rem;
+    height: 0.62rem;
     padding-left: 0.2rem;
     color: #666;
     background: #fff;

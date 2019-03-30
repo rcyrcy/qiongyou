@@ -108,6 +108,7 @@ export default {
 
   .title {
     line-height: 0.5rem;
+    height: 0.5rem;
     background: #eee;
     padding-left: 0.2rem;
     color: #666;
@@ -135,6 +136,7 @@ export default {
   .item-list {
     .item {
       line-height: 0.8rem;
+      height: 0.8rem;
       color: #666;
       padding-left: 0.2rem;
     }

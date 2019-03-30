@@ -57,7 +57,7 @@ export default {
 
     .arrow-icon {
       font-size: 0.24rem;
-      margin-left: 0.1rem;
+      margin-left: -0.04rem;
     }
   }
 }

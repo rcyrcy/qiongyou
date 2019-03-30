@@ -33,38 +33,42 @@ export default {
 @import '~styles/mixins.styl';
 
 .gambit-title {
-  height: 1rem;
   line-height: 1rem;
   text-align: center;
   font-size: 0.35rem;
   font-weight: 600;
+  height: 1rem;
 }
 
-.item-img-wrapper {
-  overflow: hidden;
-  height: 0;
-  padding-bottom: 37.09%;
+.item {
+  overflow: auto;
 
-  .item-img {
-    width: 100%;
-  }
-}
+  .item-img-wrapper {
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 37.09%;
 
-.item-info {
-  flex: 1;
-  padding: 0.1rem;
-  min-width: 0;
-
-  .item-title {
-    line-height: 0.53rem;
-    font-size: 0.32rem;
-    ellipsis();
+    .item-img {
+      width: 100%;
+    }
   }
 
-  .item-desc {
-    line-height: 0.43rem;
-    color: #ccc;
-    ellipsis();
+  .item-info {
+    padding: 0.1rem;
+
+    .item-title {
+      line-height: 0.54rem;
+      font-size: 0.32rem;
+      height: 0.54rem;
+      ellipsis();
+    }
+
+    .item-desc {
+      line-height: 0.4rem;
+      color: #ccc;
+      height: 0.4rem;
+      ellipsis();
+    }
   }
 }
 </style>
