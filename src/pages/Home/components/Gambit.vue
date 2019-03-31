@@ -25,10 +25,10 @@ export default {
   props: {
     gambitList: Array,
     outerRef: Object
-  },
-  updated() {
-    this.outerRef.refresh();
   }
+  // updated() {
+  //   this.outerRef.refresh();
+  // }
 };
 </script>
 

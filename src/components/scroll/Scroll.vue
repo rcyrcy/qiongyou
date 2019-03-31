@@ -71,15 +71,21 @@ export default {
         l = content.children.length;
       content.style.width = l * (w + 10) + "px";
     },
+    // refresh() {
+    //   this.$nextTick(() => {
+    //     if (!this.scroll) {
+    //       this.scroll = new BScroll(this.$refs.wrapper, {
+    //         probeType: this.probeType,
+    //         click: this.click,
+    //         mouseWheel: this.mouseWheel
+    //       });
+    //     }
+    //     this._initContentWidth();
+    //     this.scroll.refresh();
+    //   });
+    // }
     refresh() {
       this.$nextTick(() => {
-        if (!this.scroll) {
-          this.scroll = new BScroll(this.$refs.wrapper, {
-            probeType: this.probeType,
-            click: this.click,
-            mouseWheel: this.mouseWheel
-          });
-        }
         this._initContentWidth();
         this.scroll.refresh();
       });
