@@ -38,11 +38,11 @@ Mock.mock(base + "/home/recommend", "get", {
     {
       id: "@increment",
       "imgUrl|+1": [
-        "https://pic.qyer.com/FsL5I4bSFlui62LYUwIjDJQJEuWg/300x200",
-        "https://pic.qyer.com/FsL5I4bSFlui62LYUwIjDJQJEuWg/300x200",
-        "https://pic.qyer.com/FsL5I4bSFlui62LYUwIjDJQJEuWg/300x200",
-        "https://pic.qyer.com/FsL5I4bSFlui62LYUwIjDJQJEuWg/300x200",
-        "https://pic.qyer.com/FsL5I4bSFlui62LYUwIjDJQJEuWg/300x200"
+        "http://img1.qunarzz.com/sight/source/1505/ce/bc89bc2f0e33ea.jpg_r_640x214_3e408453.jpg",
+        "http://img1.qunarzz.com/sight/source/1505/ce/bc89bc2f0e33ea.jpg_r_640x214_3e408453.jpg",
+        "http://img1.qunarzz.com/sight/source/1505/ce/bc89bc2f0e33ea.jpg_r_640x214_3e408453.jpg",
+        "http://img1.qunarzz.com/sight/source/1505/ce/bc89bc2f0e33ea.jpg_r_640x214_3e408453.jpg",
+        "http://img1.qunarzz.com/sight/source/1505/ce/bc89bc2f0e33ea.jpg_r_640x214_3e408453.jpg"
       ],
       title: "@csentence",
       desc: "@csentence(5)"

@@ -2,14 +2,23 @@
   <div>
     <div class="recommend-title">精选折扣 每日更新</div>
     <ul class="item-wrap">
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <!-- router-link的一种写法和作用 -->
+      <!-- 除为a标签外也可变其他标签 -->
+      <!-- :to="'/detail/'+item.id"动态绑定 -->
+      <router-link
+        tag="li"
+        :to="'/detail/'+item.id"
+        class="item border-bottom"
+        v-for="item of recommendList"
+        :key="item.id"
+      >
         <img :src="item.imgUrl" class="item-img">
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
           <p class="item-desc">{{item.desc}}</p>
           <button class="item-button">查看详情</button>
         </div>
-      </li>
+      </router-link>
     </ul>
   </div>
 </template>
@@ -44,6 +53,7 @@ export default {
     display: flex;
     overflow: auto;
     height: 1.9rem;
+    color: #000;
 
     .item-img {
       width: 1.7rem;
