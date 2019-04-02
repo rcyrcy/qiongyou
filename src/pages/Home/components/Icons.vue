@@ -56,10 +56,11 @@ export default {
 .icons >>> .swiper-container {
   height: 0;
   padding-bottom: 20%;
+  overflow: auto;
 }
 
 .icon {
-  overflow: hidden;
+  overflow: auto;
   float: left;
   width: 20%;
   padding-bottom: 20%;

@@ -1,11 +1,13 @@
 <template>
-  <div class="wrapper">
-    <swiper :options="swiperOption" v-if="showSwiper">
-      <swiper-slide v-for="value of swiperList" :key="value.id">
-        <img class="swiper-img" :src="value.imgUrl">
-      </swiper-slide>
-      <div class="swiper-pagination" slot="pagination"></div>
-    </swiper>
+  <div class="wrapper-wrap">
+    <div class="wrapper">
+      <swiper :options="swiperOption" v-if="showSwiper">
+        <swiper-slide v-for="value of swiperList" :key="value.id">
+          <img class="swiper-img" :src="value.imgUrl">
+        </swiper-slide>
+        <div class="swiper-pagination" slot="pagination"></div>
+      </swiper>
+    </div>
   </div>
 </template>
 
@@ -38,15 +40,18 @@ export default {
   background: #fff;
 }
 
-.wrapper {
-  overflow: hidden;
+.wrapper-wrap {
+  overflow: auto;
   width: 100%;
-  height: 0;
-  padding-bottom: 53.12%;
-  background: #ccc;
 
-  .swiper-img {
-    width: 100%;
+  .wrapper {
+    height: 0;
+    padding-bottom: 53.12%;
+    background: #ccc;
+
+    .swiper-img {
+      width: 100%;
+    }
   }
 }
 </style>

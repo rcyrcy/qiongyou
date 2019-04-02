@@ -1,87 +1,11 @@
 <template>
-  <!-- <div ref="wrapper"> -->
   <div>
-    <!-- <Scroll ref="myScroll"> -->
-    <div>
-      <!-- <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-      </ul>-->
-      <home-header></home-header>
-      <home-swiper :swiperList="swiperList"></home-swiper>
-      <home-search></home-search>
-      <home-icons :cionList="cionList"></home-icons>
-      <home-recommend :recommendList="recommendList"></home-recommend>
-      <home-gambit :gambitList="gambitList" :outer-ref="$refs.myScroll"></home-gambit>
-    </div>
-    <!-- </Scroll> -->
+    <home-header></home-header>
+    <home-swiper :swiperList="swiperList"></home-swiper>
+    <home-search></home-search>
+    <home-icons :cionList="cionList"></home-icons>
+    <home-recommend :recommendList="recommendList"></home-recommend>
+    <home-gambit :gambitList="gambitList" :outer-ref="$refs.myScroll"></home-gambit>
   </div>
 </template>
 
@@ -92,8 +16,6 @@ import HomeSearch from "./components/Search";
 import HomeIcons from "./components/Icons";
 import HomeRecommend from "./components/Recommend";
 import HomeGambit from "./components/Gambit";
-// import Bscroll from "better-scroll";
-// import Scroll from "@/components/scroll/Scroll";
 import { getSwiper } from "@/api/home";
 import { getIcons } from "@/api/home";
 import { getRecommend } from "@/api/home";
@@ -108,7 +30,6 @@ export default {
     HomeIcons,
     HomeRecommend,
     HomeGambit
-    // Scroll
   },
   data() {
     return {

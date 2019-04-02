@@ -16,7 +16,7 @@
             v-for="item of hot"
             :key="item.id"
             class="button-wrapper"
-            @click="handelCityClick(item.name)"
+            @touchend.prevent="handelCityClick(item.name)"
           >
             <div class="button">{{item.name}}</div>
           </div>
@@ -29,7 +29,7 @@
             class="item border-bottom"
             v-for="innerItem of item"
             :key="innerItem.id"
-            @click="handelCityClick(innerItem.name)"
+            @touchend.prevent="handelCityClick(innerItem.name)"
           >{{innerItem.name}}</div>
         </div>
       </div>
@@ -105,6 +105,7 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
+  background: #fff;
 
   .title {
     line-height: 0.5rem;
