@@ -22,5 +22,8 @@ export default new Router({
       name: "Detail",
       component: Detail
     }
-  ]
+  ], // 解决跟随滚动bug
+  scrollBehavior(to, from, savedPosition) {
+    return { x: 0, y: 0 };
+  }
 });
