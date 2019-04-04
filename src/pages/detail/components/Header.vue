@@ -78,6 +78,7 @@ export default {
   color: #fff;
   background: $bgColor;
   font-size: 0.3rem;
+  z-index: 2;
 
   .header-fixed-back {
     position: absolute;
